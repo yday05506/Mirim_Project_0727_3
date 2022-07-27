@@ -6,10 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RadioGroup;
 
 public class MainActivity extends AppCompatActivity {
     RadioGroup rg;
+    EditText editTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         Button btnStart = findViewById(R.id.btn_start);
         btnStart.setOnClickListener(btnStartListener);
         rg = findViewById(R.id.rg);
+        editTitle = findViewById(R.id.edit_title);
     }
 
     View.OnClickListener btnStartListener = new View.OnClickListener() {
@@ -33,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
                     break;
             }
             Intent intent = new Intent(getApplicationContext(), c);
+            intent.putExtra("title", editTitle.getText().toString());
+            startActivity(intent);
         }
     };
 }

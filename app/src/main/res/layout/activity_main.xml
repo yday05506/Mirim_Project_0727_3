@@ -10,6 +10,23 @@
     android:background="#589F56"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:text="제목 : "/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_title"/>
+    </LinearLayout>
+
     <RadioGroup
         android:id="@+id/rg"
         android:layout_width="match_parent"
@@ -34,5 +51,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="새로운 Activity 시작"/>
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="제목 나올 부분"
+        android:layout_marginTop="20dp"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="20sp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/psh"/>
+
 
 </LinearLayout>
